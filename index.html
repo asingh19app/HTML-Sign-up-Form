@@ -15,20 +15,29 @@
         <!-- TODO: Set Action and Method Properties -->
         <form method="GET" action="results.html"> 
             <div>
+                <span class="required-field">*</span>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength= "35"required>
             </div>
             <!-- TODO: Create a "lastname" input with type "text" -->
             <div>
+                <span class="required-field">*</span>
                 <label for="lastName">Your Last Name</label>
-                <input type="text" id="lastName" name="lastName">
+                <input type="text" id="lastName" name="lastName" minlength="2" maxlength="35" required>
+            </div>
+            <div>
+                <span class="required-field">*</span>
+                <label for="age">Your Age</label>
+                <input type="number" id="age" value="age" min="21" max="120">
+                <h5>The particpant entering this form must be 21 and over to apply.</h5>
             </div>
             <!-- TODO: Make fieldset and legend -->
             <fieldset>
                  <!-- Todo: Email Input -->
                 <legend>Your Contact Info</legend>
+                <span class="required-field">*</span>
                 <label for="email">Your Email</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" required>
                
                 <!-- Todo: Street Address Input -->
                
@@ -40,7 +49,6 @@
                 <input type="text" id="city" name="city">
 
                 <label for="state">Your State</label>
-                <input type="text" name="state" id="state">
                 <select name="state"> 
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -95,7 +103,7 @@
                 
 
                 <label for="zip">Your Zip Code</label>
-                <input type="text" name="zip" id="zip">
+                <input type="number" name="zip" id="zip">
             </fieldset>
 
             <!-- TODO: Second fieldset -->
